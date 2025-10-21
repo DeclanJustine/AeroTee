@@ -209,7 +209,7 @@ export default function HomePage() {
       {/* Section 3 */}
       <section className="relative flex justify-between items-center bg-[#1a1a1a] text-white py-20 px-24 overflow-hidden border-t border-[#2E2E2E]">
         <Image
-          src="/vector.svg"
+          src="/Vector.svg"
           alt="decorative vector"
           width={1600}
           height={1600}
