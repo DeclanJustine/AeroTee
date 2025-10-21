@@ -277,7 +277,7 @@ export default function HomePage() {
       {/* Section Partner */}
       <section className="relative flex flex-col items-center justify-center bg-[#faf9f7] text-[#1a1a1a] py-20 px-10 space-y-10 border-t border-[#2E2E2E]">
         <div className="text-center space-y-12">
-          <Image src="/logo1.svg" alt="Brand Logo" width={33} height={28} className="mx-auto" />
+          <Image src="/logo.svg" alt="Brand Logo" width={33} height={28} className="mx-auto" />
           <p className="font-[NotoSans] text-[29px] text-gray-700">
             Where minimalist design meets everyday ease.
           </p>
