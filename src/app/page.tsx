@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Arizonia, Montserrat, Anton_SC, Antic_Didone, Anonymous_Pro, Anybody} from "next/font/google";
+import { Arizonia, Montserrat, Anton_SC, Antic_Didone, Anonymous_Pro, Anybody, Antonio} from "next/font/google";
 
 const arizonia = Arizonia({
   subsets: ["latin"],
@@ -28,6 +28,11 @@ const anonymousPro = Anonymous_Pro({
 });
 
 const anybody = Anybody({ 
+  subsets: ['latin'], 
+  weight: '200' 
+}); 
+
+const antonio = Antonio({ 
   subsets: ['latin'], 
   weight: '200' 
 }); 
@@ -186,6 +191,87 @@ export default function HomePage() {
 
       <div className="w-full py-[20px] bg-[#faf9f7]" />
       
+      {/*Section 3*/}
+      <section className="relative flex justify-between items-center bg-[#1a1a1a] text-white py-20 px-24 overflow-hidden border-t border-[#2E2E2E]">
+        <img
+          src="/vector.svg"
+          alt="decorative vector"
+          className="absolute right-0 top-0 w-[1600px] opacity-40 pointer-events-none select-none z-50"
+        />
+        {/*Kiri: Teks*/}
+        <div className="max-w-[1000px] space-y-8">
+          <h2 className="font-[Anton] text-[74px] leading-[1.05] tracking-wide uppercase">
+            Minimal Style,<br />
+            <span className="pl-24 block">Maximum Comfort.</span>
+          </h2>
+          <br />
+          <p className="font-[anybody] text-[32px] text-gray-300 leading-relaxed">
+            Crafted with ultra-soft, breathable cotton, the <br /> AeroTee Light Series keeps you cool, light, 
+            and <br /> unrestricted throughout your day. Its minimalist <br /> silhouette makes it effortless to wear 
+            from morning <br /> errands to late-night hangouts.
+          </p>
+          <br />
+          {/* Harga */}
+          <div className="font-[Antonio] flex items-center gap-6">
+            <span className="text-[64px] font-semibold">$89</span>
+            <span className="text-[64px] text-gray-500 line-through">$109</span>
+          </div>
+
+          {/* Tombol */}
+          <button className="mt-6 bg-white font-[Montserrat] text-[#1a1a1a] text-[32px] px-16 py-3 rounded-xl font-medium hover:bg-gray-200 transition">
+            Shop Now &nbsp; &gt;
+          </button>
+        </div>
+
+        {/*Kanan: Foto*/}
+        {/*Kanan: Foto Card Utama*/}
+      <div className="flex flex-col items-center gap-8">
+        {/* Card besar */}
+        <div className="relative w-[756px] h-[919px] rounded-2xl overflow-hidden bg-[#f4efe9] shadow-2xl">
+          <img
+            src="/model1.svg"
+            alt="Minimal Style Outfit"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* 4 card kecil di bawahnya */}
+        <div className="flex justify-center gap-6">
+          <div className="relative w-[175px] h-[218px] rounded-2xl overflow-hidden bg-[#f4efe9] shadow-lg hover:-translate-y-2 transition-transform duration-300">
+            <img
+              src="/model1.svg"
+              alt="Look 1"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="relative w-[175px] h-[218px] rounded-2xl overflow-hidden bg-[#f4efe9] shadow-lg hover:-translate-y-2 transition-transform duration-300">
+            <img
+              src="/model1.svg"
+              alt="Look 2"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="relative w-[175px] h-[218px] rounded-2xl overflow-hidden bg-[#f4efe9] shadow-lg hover:-translate-y-2 transition-transform duration-300">
+            <img
+              src="/model1.svg"
+              alt="Look 3"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="relative w-[175px] h-[218px] rounded-2xl overflow-hidden bg-[#f4efe9] shadow-lg hover:-translate-y-2 transition-transform duration-300">
+            <img
+              src="/model1.svg"
+              alt="Look 4"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+      </section>
+      <div className="w-full py-[20px] bg-[#faf9f7]" />
     </>
   );
 }
