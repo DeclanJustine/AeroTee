@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Arizonia, Montserrat, Anton_SC, Antic_Didone, Anonymous_Pro, Anybody, Antonio} from "next/font/google";
+import { Arizonia, Montserrat, Anton_SC, Antic_Didone, Anonymous_Pro, Anybody, Antonio, Noto_Sans} from "next/font/google";
 
 const arizonia = Arizonia({
   subsets: ["latin"],
@@ -36,6 +36,11 @@ const antonio = Antonio({
   subsets: ['latin'], 
   weight: '200' 
 }); 
+
+const noto = Noto_Sans({
+  subsets: ["latin"],
+  weight: ["400"], // pakai 400 untuk regular
+});
 
 export default function HomePage() {
   return (
@@ -223,7 +228,6 @@ export default function HomePage() {
           </button>
         </div>
 
-        {/*Kanan: Foto*/}
         {/*Kanan: Foto Card Utama*/}
       <div className="flex flex-col items-center gap-8">
         {/* Card besar */}
@@ -272,6 +276,60 @@ export default function HomePage() {
       </div>
       </section>
       <div className="w-full py-[20px] bg-[#faf9f7]" />
+      {/* Section Partner */}
+      <section className="relative flex flex-col items-center justify-center bg-[#faf9f7] text-[#1a1a1a] py-20 px-10 space-y-10 border-t border-[#2E2E2E]">
+        {/* Judul */}
+        <div className="text-center space-y-12">
+          <img 
+            src="/logo1.svg" 
+            alt="Brand Logo"
+            className="mx-auto h-[29px] w-auto"
+          />
+          <p className="font-[NotoSans] text-[29px] text-gray-700">
+            Where minimalist design meets everyday ease.
+          </p>
+        </div>
+
+
+        {/* Separator */}
+        <div className="text-[26px]">×</div>
+
+        {/* Logo Partner */}
+        <div className="flex items-center justify-center gap-16 flex-wrap">
+        <img
+          src="/boutique.svg"
+          alt="Boutique"
+          className="w-[183px] h-[36px] opacity-80 hover:opacity-100 transition"
+        />
+        <img
+          src="/oco.svg"
+          alt="OCO"
+          className="w-[183px] h-[36px] opacity-80 hover:opacity-100 transition"
+        />
+        <img
+          src="/mangentle.svg"
+          alt="Mangentle"
+          className="w-[183px] h-[36px] opacity-80 hover:opacity-100 transition"
+        />
+        <img
+          src="/flowstudio.svg"
+          alt="FlowStudio"
+          className="w-[183px] h-[36px] opacity-80 hover:opacity-100 transition"
+        />
+        <img
+          src="/ox.svg"
+          alt="OX"
+          className="w-[183px] h-[36px] opacity-80 hover:opacity-100 transition"
+        />
+      </div>
+      </section>
+
+      {/* Last Section */}
+      <section className="bg-[#faf9f7] flex justify-center items-center py-20 border-t border-[#E6E6E6]">
+        <p className="font-[Anybody] text-[35px] text-gray-800 tracking-wide text-center">
+          Worn by Thousands. Loved by Everyone.
+        </p>
+      </section>
     </>
   );
 }
